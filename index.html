@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperacion</title>
+    <script src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/estilosm.css">
+</head>
+<body>
+    <h1>IMC</h1>
+
+    <div class="encabezado">
+        <header>
+            <h1>IMC POBLACIONAL</h1>
+        </header>
+    </div>
+
+    <div class="campo">
+
+        <label for="">Edad</label>
+        <input type="text" name="edad" id="edad">
+
+        <label for="">Altura</label>
+        <input type="text" name="altura" id="altura">
+
+        <label for="">Peso</label>
+        <input type="text" name="peso" id="peso">
+
+        <br>
+        <br>
+
+        <label for="">IMC= </label>
+        <input type="text" name="imc" id="imc">
+
+        <label for="">Nivel= </label>
+        <input type="text" name="nivel" id="nivel">
+
+        <br>
+        <br>
+                
+        <button id="btnGenerar" onclick="generar()">Generar</button>
+        <button id="btnCalcular" onclick="calcular()">Calcular</button>
+        <button id="btnRegistrar" onclick="registrar()">Registrar</button>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div id="contenedor-registros">
+            <h2>Registros</h2>
+            <center>
+				<table border="1">
+					<thead>
+						<tr>
+							<th width="50">Num</th>
+							<th width="50">Edad</th>
+							<th width="90">Altura</th>
+							<th width="90">Peso</th>
+							<th width="50">IMC</th>
+							<th width="150">Nivel</th>
+						</tr>
+					</thead>
+					<tbody id="registros"></tbody>
+				</table>
+			</center>
+            <button id="btnBorrar" onclick="borrar()">Borrar Registros</button>
+        </div>
+
+        <div id="contenedor-promedio">
+            <label>IMC promedio:</label>
+            <p id="imcPromedio"></p>
+        </div>
+</html>
